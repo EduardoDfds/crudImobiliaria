@@ -11,4 +11,10 @@ public interface TerrenoRepository extends JpaRepository<Terreno,Long>{
 	
 	@Query("select t from Terreno t where t.loteadora.id =?2 and t.situacao=?1")
 	List<Terreno> terrenosLoteadoraSituacao(String situacao, Long idLoteadora);
+	
+	@Query("select t from Terreno t where t.loteadora.id =?1 and t.situacao='vendido'")
+	List<Terreno> buscarTerrenosVendidosLoteadora(Long idLoteadora);
+	
+	@Query("select t from Terreno t where t.loteadora.id =?1 and t.situacao='livre'")
+	List<Terreno> buscarTerrenosLivresLoteadora(Long idLoteadora);
 }

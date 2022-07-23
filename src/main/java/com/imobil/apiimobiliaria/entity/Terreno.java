@@ -18,7 +18,7 @@ public class Terreno {
 	private Long id;
 	
 	private String endereco;
-	private double valorPedido;
+	private Double valorPedido;
 	private Double valorVenda;
 	private String medidas;
 	private String situacao = "livre";
