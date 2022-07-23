@@ -37,7 +37,6 @@ public class ImobiliariaService {
 	}
 	
 	public List<Terreno> aumentarValorVendaTerrenoLivre(Long idLoteadora, Double porcentagemInformada) {
-		
 	
 		List<Terreno> terrenoLivre = terrenoRepository.buscarTerrenosLivresLoteadora(idLoteadora);
 		Double aumentoTerreno=0.;
